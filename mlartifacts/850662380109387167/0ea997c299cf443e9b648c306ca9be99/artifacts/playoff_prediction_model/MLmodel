@@ -1,0 +1,45 @@
+artifact_path: playoff_prediction_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.21.3
+model_size_bytes: 1304146
+model_uuid: dfcd4fa3277340bcaf118402b62028d8
+prompts: null
+run_id: 0ea997c299cf443e9b648c306ca9be99
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "WinsPR", "required": true}, {"type": "double",
+    "name": "WinsRollingPR", "required": true}, {"type": "double", "name": "OTier",
+    "required": true}, {"type": "double", "name": "DTier", "required": true}, {"type":
+    "double", "name": "OrollTier", "required": true}, {"type": "double", "name": "DrollTier",
+    "required": true}, {"type": "double", "name": "Non_QB_PR", "required": true},
+    {"type": "double", "name": "Def_PR", "required": true}, {"type": "double", "name":
+    "Cov_PR", "required": true}, {"type": "double", "name": "Prush_PR", "required":
+    true}, {"type": "double", "name": "Rdef_PR", "required": true}, {"type": "double",
+    "name": "Rblk_PR", "required": true}, {"type": "double", "name": "Pblk_PR", "required":
+    true}, {"type": "double", "name": "OL_PR", "required": true}, {"type": "double",
+    "name": "Rec_PR", "required": true}, {"type": "double", "name": "Rush_PR", "required":
+    true}, {"type": "double", "name": "PRFloor", "required": true}, {"type": "double",
+    "name": "PRCeiling", "required": true}, {"type": "double", "name": "PRWar", "required":
+    true}, {"type": "double", "name": "QBValue", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-04-21 20:55:36.870690'
