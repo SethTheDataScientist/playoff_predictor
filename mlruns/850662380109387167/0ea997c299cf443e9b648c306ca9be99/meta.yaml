@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/850662380109387167/0ea997c299cf443e9b648c306ca9be99/artifacts
+end_time: 1745268940759
+entry_point_name: ''
+experiment_id: '850662380109387167'
+lifecycle_stage: active
+run_id: 0ea997c299cf443e9b648c306ca9be99
+run_name: resilient-croc-676
+run_uuid: 0ea997c299cf443e9b648c306ca9be99
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745268936767
+status: 3
+tags: []
+user_id: sethl
