@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/819829235098728476/a963b28787af4d17bc0206df39f2370e/artifacts
+end_time: 1745271529395
+entry_point_name: ''
+experiment_id: '819829235098728476'
+lifecycle_stage: active
+run_id: a963b28787af4d17bc0206df39f2370e
+run_name: whimsical-boar-972
+run_uuid: a963b28787af4d17bc0206df39f2370e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745271525533
+status: 3
+tags: []
+user_id: sethl

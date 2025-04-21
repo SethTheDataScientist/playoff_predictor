@@ -23,8 +23,8 @@ data = model_functions.DataLoader(path)
 
 save_dir=os.path.abspath(f"../mlruns/{data.run_data[1]}/{data.run_data[0]}/output")
 
-# model_functions.shap_analysis(data.best_model, data.train_X, data.test_X, model_type='multi-class',
-#                                 save_dir=save_dir, prefix='shap_')
+model_functions.shap_analysis(data.best_model, data.train_X, data.test_X, model_type='regression',
+                                save_dir=save_dir, prefix='shap_')
 
 output_predictions = data.best_model.predict(data.full_predictions.drop(columns = 'season'))
 output_predictions = pd.Series(output_predictions, index=data.full_predictions.index)

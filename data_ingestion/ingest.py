@@ -25,11 +25,11 @@ def run_data_ingestion(path, save_path):
 
     data.monotonic_constraints = {}
     for col in data.select_features:
-        data.monotonic_constraints[col] = 0
+        data.monotonic_constraints[col] = 1
 
     data.model_df['label'] = (data.model_df['label'] - 1).astype(int)
 
-    # data.model_df['scaling'] = (data.model_df['label'] + 1)/4
+    data.model_df['scaling'] = (data.model_df['label'] + 1)/4
 
     # Split into training and prediction sets
     data.train_df = data.model_df.copy()

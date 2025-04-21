@@ -27,13 +27,13 @@ data = model_functions.DataLoader(path)
 data.train_X = data.model_df[data.model_df.season <= 2022][data.select_features].drop(columns= ['season'])
 data.train_y = data.model_df[data.model_df.season <= 2022]['label']
 data.train_groups = data.model_df[data.model_df.season <= 2022]['season']
-# data.train_sw = data.model_df[data.model_df.season <= 2022]['scaling']
+data.train_sw = data.model_df[data.model_df.season <= 2022]['scaling']
 
 
 data.test_X = data.model_df[data.model_df.season >= 2023][data.select_features].drop(columns= ['season'])
 data.test_y = data.model_df[data.model_df.season >= 2023]['label']
 data.test_groups = data.model_df[data.model_df.season >= 2023]['season']
-# data.test_sw = data.model_df[data.model_df.season >= 2023]['scaling']
+data.test_sw = data.model_df[data.model_df.season >= 2023]['scaling']
 
 
 data.plot_prediction_set = data.prediction_set[data.select_features]
@@ -42,14 +42,14 @@ data.full_predictions = data.model_df[data.select_features]
 
 data.eval_model_df = data.model_df.copy()
 
-data.best_model, data.feature_importances,data.y_proba, data.test_predictions, data.best_grid, data.results, data.best_group_scores = model_functions.xgboost_multiclass_model_logo(data.train_X, data.train_y, data.train_groups, data.test_X, data.test_y, 
-                            # train_sw  = data.train_sw, test_sw  = data.test_sw,
+data.best_model, data.feature_importances, data.test_predictions, data.best_grid, data.results, data.best_group_scores = model_functions.xgboost_regression_model_logo(data.train_X, data.train_y, data.train_groups, data.test_X, data.test_y, 
+                            train_sw  = data.train_sw, test_sw  = data.test_sw,
                             monotonic_constraints=data.monotonic_constraints)
 
 
 
 # Create a new MLflow Experiment
-mlflow.set_experiment("playoff_prediction_model")
+mlflow.set_experiment("playoff_prediction_model_regression")
 
 # Start an MLflow run
 with mlflow.start_run():
@@ -61,7 +61,7 @@ with mlflow.start_run():
         mlflow.log_metric(metric, value)
 
     # Set a tag that we can use to remind ourselves what this run was for
-    mlflow.set_tag("Training Info", "Removing monotonic constraints")
+    mlflow.set_tag("Training Info", "Running the model with regression, monotonic constraints, and scaling")
 
     # Infer the model signature
     signature = infer_signature(data.train_X, data.best_model.predict(data.train_X))
@@ -69,10 +69,10 @@ with mlflow.start_run():
     # Log the model
     model_info = mlflow.sklearn.log_model(
         sk_model=data.best_model,
-        artifact_path="playoff_prediction_model",
+        artifact_path="playoff_prediction_model_regression",
         signature=signature,
         input_example=data.train_X,
-        registered_model_name="playoff_prediction_model",
+        registered_model_name="playoff_prediction_model_regression",
     )
 
     
