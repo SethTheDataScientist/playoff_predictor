@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/850662380109387167
+creation_time: 1745262836674
+experiment_id: '850662380109387167'
+last_update_time: 1745262836674
+lifecycle_stage: active
+name: playoff_prediction_model
