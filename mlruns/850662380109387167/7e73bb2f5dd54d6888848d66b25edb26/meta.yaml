@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/850662380109387167/7e73bb2f5dd54d6888848d66b25edb26/artifacts
+end_time: 1745266386749
+entry_point_name: ''
+experiment_id: '850662380109387167'
+lifecycle_stage: active
+run_id: 7e73bb2f5dd54d6888848d66b25edb26
+run_name: shivering-lamb-31
+run_uuid: 7e73bb2f5dd54d6888848d66b25edb26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745266382621
+status: 3
+tags: []
+user_id: sethl
