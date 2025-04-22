@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1745274897955
+current_stage: None
+description: ''
+last_updated_timestamp: 1745274897955
+name: playoff_prediction_model_regression
+run_id: 8a094c88331f448d90d0d938a818bc5b
+run_link: ''
+source: mlflow-artifacts:/819829235098728476/8a094c88331f448d90d0d938a818bc5b/artifacts/playoff_prediction_model_regression
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/819829235098728476/8a094c88331f448d90d0d938a818bc5b/artifacts/playoff_prediction_model_regression
+user_id: null
+version: 4

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/819829235098728476/2bc9bfda4c304eb9aa6a3dadfea445bb/artifacts
+end_time: 1745297621490
+entry_point_name: ''
+experiment_id: '819829235098728476'
+lifecycle_stage: active
+run_id: 2bc9bfda4c304eb9aa6a3dadfea445bb
+run_name: hilarious-ox-3
+run_uuid: 2bc9bfda4c304eb9aa6a3dadfea445bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745297617350
+status: 3
+tags: []
+user_id: sethl
