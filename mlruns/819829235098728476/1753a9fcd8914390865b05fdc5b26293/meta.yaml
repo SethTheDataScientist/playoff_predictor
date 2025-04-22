@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/819829235098728476/1753a9fcd8914390865b05fdc5b26293/artifacts
+end_time: 1745273839303
+entry_point_name: ''
+experiment_id: '819829235098728476'
+lifecycle_stage: active
+run_id: 1753a9fcd8914390865b05fdc5b26293
+run_name: able-shrimp-411
+run_uuid: 1753a9fcd8914390865b05fdc5b26293
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745273835420
+status: 3
+tags: []
+user_id: sethl
